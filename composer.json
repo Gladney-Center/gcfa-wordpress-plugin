@@ -1,0 +1,13 @@
+{
+    "name": "gladney/gcfa-wp-plugin",
+    "description": "Branding and set-up plugin for all GCFA Wordpress sites",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Paul",
+            "email": "enlightenedpie@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
