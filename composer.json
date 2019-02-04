@@ -9,5 +9,13 @@
             "email": "enlightenedpie@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gladney\\": "src/"
+        }
+    }
 }
