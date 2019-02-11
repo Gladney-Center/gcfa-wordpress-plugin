@@ -10,7 +10,8 @@ class Menus {
 		register_nav_menus(
 			[
 				'header-menu' => 'Header Menu',
-				'footer-menu' => 'Footer Menu'
+				'footer-menu' => 'Footer Menu',
+				'third-menu' => 'Extra Menu'
 			]
 		);
 	}
