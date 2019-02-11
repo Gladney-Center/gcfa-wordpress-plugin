@@ -38,6 +38,7 @@ final class Gladney {
 		require_once 'classes/install.class.php';
 		require_once 'classes/scripts.class.php';
 		require_once 'classes/branding.class.php';
+		require_once 'classes/menus.class.php';
 	}
 
 	private function init_hooks() {
@@ -45,8 +46,8 @@ final class Gladney {
 		// plugin-specific hooks
 		register_activation_hook( GCFA_PLUGIN_FILE, [ __NAMESPACE__ . '\\Install', 'install' ] );
         register_deactivation_hook( GCFA_PLUGIN_FILE, [ __NAMESPACE__ . '\\Install', 'uninstall' ] );
-		add_action( 'init', [ $this, 'init' ], 1 );
 		add_action( 'after_setup_theme', [ $this, 'theme_setup' ] );
+		add_action( 'init', [ $this, 'init' ], 1 );
 		add_action( 'gladney_loaded', [ $this, 'gladney_loaded' ], 999 );
 
 		// front end hooks
@@ -80,7 +81,10 @@ final class Gladney {
         remove_action( 'wp_print_styles', 'print_emoji_styles' );
         remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
         remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-        remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+		
+		// additions / class calls
+		\Gladney\Menus::register();
 
 	}
 
