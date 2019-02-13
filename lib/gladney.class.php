@@ -39,6 +39,7 @@ final class Gladney {
 		require_once 'classes/scripts.class.php';
 		require_once 'classes/branding.class.php';
 		require_once 'classes/menus.class.php';
+		require_once 'classes/customizer.class.php';
 	}
 
 	private function init_hooks() {
@@ -85,6 +86,7 @@ final class Gladney {
 		
 		// additions / class calls
 		\Gladney\Menus::register();
+		\Gladney\Customizer::init();
 
 	}
 

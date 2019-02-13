@@ -11,7 +11,7 @@ class Menus {
 			[
 				'header-menu' => 'Header Menu',
 				'footer-menu' => 'Footer Menu',
-				'third-menu' => 'Extra Menu'
+				'custom-menu-1' => 'Custom Menu 1'
 			]
 		);
 	}
