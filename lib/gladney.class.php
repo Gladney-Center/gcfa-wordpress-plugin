@@ -27,7 +27,8 @@ final class Gladney {
 		$this->define( 'GCFA_BRANDNAME', 'Gladney Center for Adoption' );
 		$this->define( 'GCFA_SHORTNAME', 'Gladney' );
 		$this->define( 'GCFA_ACRONYM', 'GCFA' );
-        $this->define( 'GCFA_VERSION', '1.0.0' );
+		$this->define( 'GCFA_VERSION', '1.0.17' );
+		$this->define( 'GCFA_ASSETS_DIR', dirname( __DIR__ ) . '/assets' );
 	}
 
 	private function includes() {

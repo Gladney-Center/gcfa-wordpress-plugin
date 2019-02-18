@@ -23,5 +23,13 @@ class Customizer {
 			'description' => 'Control the content of the site footer',
 			'priority' => 130
 		]);
+
+		$wp_customize->add_panel( 'gcfa_pages', [
+			'title' => 'Pages',
+			'capability'     => 'edit_theme_options',
+			'theme_supports' => '',
+			'description' => 'Edit content within the pages of this site',
+			'priority' => 140
+		]);
 	}
 }
