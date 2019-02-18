@@ -27,7 +27,7 @@ final class Gladney {
 		$this->define( 'GCFA_BRANDNAME', 'Gladney Center for Adoption' );
 		$this->define( 'GCFA_SHORTNAME', 'Gladney' );
 		$this->define( 'GCFA_ACRONYM', 'GCFA' );
-		$this->define( 'GCFA_VERSION', '1.0.20' );
+		$this->define( 'GCFA_VERSION', '1.0.21' );
 		$this->define( 'GCFA_ASSETS_DIR', dirname( __DIR__ ) . '/assets' );
 	}
 
@@ -41,6 +41,7 @@ final class Gladney {
 		require_once 'classes/branding.class.php';
 		require_once 'classes/menus.class.php';
 		require_once 'classes/customizer.class.php';
+		require_once 'classes/custom_meta.class.php';
 	}
 
 	private function init_hooks() {
@@ -88,6 +89,7 @@ final class Gladney {
 		// additions / class calls
 		\Gladney\Menus::register();
 		\Gladney\Customizer::init();
+		\Gladney\Custom_Meta::init();
 
 	}
 
